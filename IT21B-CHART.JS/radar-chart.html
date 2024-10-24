@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Model Comparison - Radar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        canvas {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sneaker Model Comparison</h2>
+    <canvas id="radarChart" width="400" height="400"></canvas>
+
+    <script>
+        var ctx = document.getElementById('radarChart').getContext('2d');
+        var radarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Design', 'Popularity', 'Affordability'],
+                datasets: [
+                    {
+                        label: 'Nike Dunk Low',
+                        data: [5, 4, 4],
+                        backgroundColor: 'rgba(255, 165, 0, 0.2)',
+                        borderColor: 'rgba(255, 165, 0, 1)',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Adidas Samba',
+                        data: [4, 5, 3],
+                        backgroundColor: 'rgba(0, 102, 204, 0.2)',
+                        borderColor: 'rgba(0, 102, 204, 1)',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Puma Speedcat',
+                        data: [3, 4, 5],
+                        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                        borderColor: 'rgba(0, 0, 0, 1)',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 5,
+                        ticks: {
+                            display: true,
+                            stepSize: 1
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

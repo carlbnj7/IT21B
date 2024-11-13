@@ -1,0 +1,11 @@
+{
+    "monthlySales": {
+      "labels": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      "values": [320, 450, 500, 600, 580, 620, 700, 750, 690, 710, 730, 760]
+    },
+    "categorySales": {
+      "labels": ["Basketball", "Running", "Casual", "Training", "Other"],
+      "values": [2500, 1800, 2100, 1300, 600]
+    }
+  }
+  
